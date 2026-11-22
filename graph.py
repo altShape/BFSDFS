@@ -25,12 +25,18 @@ class Graph:
 
     def dfs(self, start):
         """Return a DFS visitation list starting at start."""
-        # TODO: Make an empty visited set and an empty order list.
-        # TODO: Define a recursive helper that visits a vertex and its
-        #       unvisited neighbors in their stored order.
-        # TODO: Start the helper at start and return order.
+        visited = set()
+        order = []
+        def visit(v):
+            visited.add(v)
+            order.append(v)
+            for neighbor in self.adj[v]:
+                if neighbor not in visited:
+                    visit(neighbor)
+        visit(start)
+        return order
         # Assume start exists in self.adj.
-        pass
+        
 
     def bfs(self, start):
         """Return a BFS visitation list starting at start."""
