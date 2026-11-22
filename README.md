@@ -1,6 +1,6 @@
 # CSC 225 — Graph Search: BFS and DFS
 
-**Name:** YOUR NAME HERE
+**Name: Keith McGregor 
 
 This assignment introduces graph representation and two ways to search a graph: depth-first search (DFS) and breadth-first search (BFS).
 
