@@ -8,15 +8,20 @@ class Graph:
         self.adj = {}
 
     def add_vertex(self, v):
-        # TODO: If v is not already in the dictionary, add v with an empty list.
-        pass
+        if v not in self.adj:
+            self.adj[v] = []
 
     def add_edge(self, u, v):
-        # TODO: Add both vertices (if necessary).
-        # TODO: Add v to u's list, unless it is already there.
-        # TODO: Add u to v's list, unless it is already there.
+        self.add_vertex(v)
+        self.add_vertex(u)
+        if v not in self.adj[u]:
+            self.adj[u].append(v)
+
+        if u not in self.adj[v]:
+            self.adj[v].append(u)
         # Assume u != v. The graph is undirected.
-        pass
+        
+
 
     def dfs(self, start):
         """Return a DFS visitation list starting at start."""
@@ -38,3 +43,10 @@ class Graph:
         # TODO: Return order.
         # Assume start exists in self.adj.
         pass
+
+g = Graph()
+g.add_edge('A', 'B')
+g.add_edge('A', 'C')
+g.add_edge('B', 'D')
+g.add_edge('A', 'B')
+print(g.adj)
