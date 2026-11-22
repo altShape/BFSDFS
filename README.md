@@ -64,11 +64,11 @@ Suggested approach:
 
 **Question 3.** What prevents DFS from visiting vertices forever when a graph contains a cycle?
 
-YOUR ANSWER HERE
+The visited set keeps a track of all the visited vertices, and once you get to a vertex it checks it's unvisited neighbors, and if one of them is in that visisted set then it skips that one.
 
 **Question 4.** Starting at `A` in Graph 1 below, write the DFS visit order. Explain where DFS first needs to backtrack.
 
-YOUR ANSWER HERE
+Visit order: A,B,D,E,F,C   | It first has to backtrack at F because F has no unvisited neighbors
 
 ### Part 3 — Breadth-first search (BFS)
 
