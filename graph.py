@@ -40,15 +40,21 @@ class Graph:
 
     def bfs(self, start):
         """Return a BFS visitation list starting at start."""
-        # TODO: Make an empty visited set, an empty order list, and a queue
-        #       using deque imported from collections at the top of this file.
-        # TODO: Add start to the queue and mark it visited immediately.
-        # TODO: While the queue is not empty, remove the first vertex,
-        #       append it to order, and enqueue any unvisited neighbors.
-        #       Mark neighbors visited when they enter the queue.
-        # TODO: Return order.
+        visited = set()
+        order = []
+        queue = deque()
+        queue.append(start)
+        visited.add(start)
+        while queue:
+            v = queue.popleft()
+            order.append(v)
+            for neighbor in self.adj[v]:
+                if neighbor not in visited:
+                    visited.add(neighbor)
+                    queue.append(neighbor)
+        return order
         # Assume start exists in self.adj.
-        pass
+        
 
 g = Graph()
 g.add_edge('A', 'B')

@@ -84,11 +84,11 @@ Suggested approach:
 
 **Question 5.** Why should BFS mark a neighbor visited when it is **enqueued**, rather than waiting until it is removed from the queue?
 
-YOUR ANSWER HERE
+Because if you waited t mark it as visited then you could accidenlty add the same vertext twice, which woudl make a duplicate
 
 **Question 6.** Starting at `A` in Graph 1, write the BFS visit order and list the queue contents immediately after processing `A` and immediately after processing `B`.
 
-YOUR ANSWER HERE
+visit order: A,B,C,D,E,F After processing A: queue has [B,C], Processing B: queue has [C,D]
 
 ### Part 4 — Test your code
 
