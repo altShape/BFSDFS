@@ -48,7 +48,7 @@ Because if I added an undirected edge just from A:B that just says I can go from
 
 **Question 2.** What is one advantage of an adjacency list over an adjacency matrix for a graph with relatively few edges?
 
-When you use a adj list it only stores the edges that are actually used and only takes up V+E while a matrix makes a table which is V times V even if most of the edges are never used.
+When you use a adj list it only stores the edges that are actually used and only takes up V+E while a matrix makes a table which is  V times V even if most of the edges are never used.
 
 ### Part 2 — Depth-first search (DFS)
 
