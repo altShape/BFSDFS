@@ -132,15 +132,15 @@ Tests also check neighbor lists and duplicate-edge handling. **Do not modify `te
 
 **Question 7.** Why do searches starting at `A` in Graph 3 not visit `X`, `Y`, or `Z`?
 
-YOUR ANSWER HERE
+Because graph 3 is disconnected to the A_B_C doesnt have any edges to connect to X, Y or Z
 
 **Question 8.** Suppose every edge has the same cost. Which search is useful for finding a path with the fewest edges from a starting vertex: DFS or BFS? Why?
 
-YOUR ANSWER HERE
+BFS would be better because it goes through each vertext by level, so the first time it hits a vertext that would be the cheapest or less expensive path there.
 
 **Question 9.** After your program works, describe one difference between the orders produced by DFS and BFS on Graph 1.
 
-YOUR ANSWER HERE
+DFS goes deep before going wide, and BFS goes wide before going deep
 
 ### Part 5 — Optional visualization (not graded)
 
